@@ -8,7 +8,7 @@ function _drawBackground() {
   let backgroundElem = document.getElementById("backgroundImage");
   template += `
         <div class="container-fluid" style="background-image: url('${background.img}'); height: 100vh; background-size: cover;">
-       hello world
+
         </div>
     `;
 
