@@ -42,6 +42,38 @@
           <div id="weather"></div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-4 offset-lg-6">
+          <div class="todo-list">
+            <div class="card">
+              <div class="card-body">
+                <h6>To Do List</h6>
+                <div id="saved-todos"></div>
+                <div class="add-todo">
+                  <form>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput"></label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="formGroupExampleInput"
+                        placeholder="Example input"
+                      />
+                      <button
+                        type="submit"
+                        class="btn btn-primary mb-2"
+                        onclick="app.todoController.addTodo(event)"
+                      >
+                        Add Todo
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="container clock-section">
         <div class="row">
           <div class="col-lg-6 offset-lg-3">

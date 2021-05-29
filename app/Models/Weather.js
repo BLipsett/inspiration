@@ -12,10 +12,10 @@ export default class Weather {
 
     return `
       <div>
-      <img src="http://openweathermap.org/img/wn/${this.icon}@2x.png" />
-        <p>${this.description}</p>
-        <p>${farTemp}<p>
-        <p>${this.name}</p>
+        <img src="http://openweathermap.org/img/wn/${this.icon}@2x.png" />
+            <p>${this.description}</p>
+            <p>${farTemp.toFixed(0)}<p>
+            <p>${this.name}</p>
       </div>
       `;
   }
