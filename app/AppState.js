@@ -11,6 +11,10 @@ class AppState extends EventEmitter {
   /** @type {Weather} */
 
   weather = null;
+
+  /**@type {Todos[]} */
+
+  todos = [];
 }
 
 export const ProxyState = new Proxy(new AppState(), {

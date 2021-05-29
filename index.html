@@ -50,20 +50,16 @@
                 <h6>To Do List</h6>
                 <div id="saved-todos"></div>
                 <div class="add-todo">
-                  <form>
+                  <form onsubmit="app.todoController.addTodo(event)">
                     <div class="form-group">
-                      <label for="formGroupExampleInput"></label>
+                      <label for="description"></label>
                       <input
                         type="text"
                         class="form-control"
-                        id="formGroupExampleInput"
-                        placeholder="Example input"
+                        id="description"
+                        placeholder="what's on the agenda"
                       />
-                      <button
-                        type="submit"
-                        class="btn btn-primary mb-2"
-                        onclick="app.todoController.addTodo(event)"
-                      >
+                      <button type="submit" class="btn btn-primary mb-2">
                         Add Todo
                       </button>
                     </div>
