@@ -15,6 +15,13 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="assets/style/main.css" />
     <title>Inspiration</title>
   </head>
@@ -35,39 +42,12 @@
   </style>
   <body class="debug">
     <header></header>
-    <main>
-      <div id="backgroundImage"></div>
+    <main id="backgroundImage">
+      <div></div>
+
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-2 offset-md-9 weather-section">
           <div id="weather"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-4 offset-lg-6">
-          <div class="todo-list">
-            <div class="card">
-              <div class="card-body">
-                <h6>To Do List</h6>
-                <div id="saved-todos"></div>
-                <div class="add-todo">
-                  <form onsubmit="app.todoController.addTodo(event)">
-                    <div class="form-group">
-                      <label for="description"></label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="description"
-                        placeholder="what's on the agenda"
-                      />
-                      <button type="submit" class="btn btn-primary mb-2">
-                        Add Todo
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
       <div class="container clock-section">
@@ -81,6 +61,49 @@
             <div class="row">
               <div class="col-12">
                 <div id="quote"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4 offset-lg-6">
+          <div class="todo-list">
+            <div class="card">
+              <div class="card-body">
+                <h6>To Do List</h6>
+                <form
+                  id="addNameForm"
+                  onsubmit="app.todoController.addName(event)"
+                >
+                  <label for="userName"></label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="userName"
+                    placeholder="Enter your first name"
+                  />
+                  <button>Submit Name</button>
+                </form>
+                <div id="display-todos" class="d-none">
+                  <div id="saved-todos"></div>
+                  <div class="add-todo">
+                    <form onsubmit="app.todoController.addTodo(event)">
+                      <div class="form-group">
+                        <label for="description"></label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="description"
+                          placeholder="what's on the agenda"
+                        />
+                        <button type="submit" class="btn btn-primary mb-2">
+                          Add Todo
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

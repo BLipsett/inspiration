@@ -11,10 +11,39 @@ function _drawTodos() {
 export default class TodoController {
   constructor() {
     ProxyState.on("todos", _drawTodos);
+    this.getName();
     _drawTodos();
+    this.getTodos();
   }
 
-  getTodo;
+  clicked(id) {
+    todoService.clicked(id);
+    todoService.updateTodo(id);
+  }
+
+  getName() {
+    todoService.getName();
+  }
+
+  deleteTodo(id) {
+    console.log("delete", id);
+    todoService.deleteTodo(id);
+  }
+
+  addName(event) {
+    event.preventDefault();
+    let form = event.target;
+    let userName = {
+      name: form.userName.value,
+    };
+    todoService.addName(userName);
+    this.getName();
+  }
+
+  getTodos() {
+    let user = ProxyState.activeUser.name;
+    todoService.getTodos(user);
+  }
 
   addTodo(event) {
     event.preventDefault();
@@ -23,7 +52,7 @@ export default class TodoController {
     let formData = {
       completed: false,
       description: form.description.value,
-      user: "BrianL",
+      //user: "BrianL",
     };
 
     console.log(formData);

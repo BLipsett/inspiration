@@ -15,6 +15,9 @@ class AppState extends EventEmitter {
   /**@type {Todos[]} */
 
   todos = [];
+
+  /**{ActiveUser} */
+  activeUser = null;
 }
 
 export const ProxyState = new Proxy(new AppState(), {

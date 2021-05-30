@@ -6,13 +6,14 @@ function _drawBackground() {
   console.log(background.img);
   let template = "";
   let backgroundElem = document.getElementById("backgroundImage");
+
   template += `
-        <div class="container-fluid" style="background-image: url('${background.img}'); height: 100vh; background-size: cover;">
+        <div class="container-fluid background" style="background-image: url('${background.img}'); height: 100vh; background-size: cover;">
 
         </div>
     `;
 
-  backgroundElem.innerHTML = template;
+  backgroundElem.innerHTML += template;
 }
 
 export default class BackgroundController {
