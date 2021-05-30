@@ -10691,10 +10691,10 @@ body {
   background-color: #f2f2f2;
 }
 
-#backgroundImage {
+.background {
   position: absolute;
   top: 0;
-  left: 0;
+  z-index: -1;
 }
 
 main {
