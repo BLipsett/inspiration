@@ -10718,4 +10718,16 @@ main {
   border-radius: 10px;
 }
 
+.author {
+  display: none;
+}
+
+.author-show:hover .author {
+  display: block;
+}
+
+.task-done {
+  text-decoration: line-through;
+}
+
 /*# sourceMappingURL=main.css.map */

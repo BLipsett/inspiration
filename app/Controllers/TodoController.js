@@ -4,9 +4,35 @@ import { todoService } from "../Services/TodoService.js";
 function _drawTodos() {
   let template = "";
   let todoElem = document.getElementById("saved-todos");
-  ProxyState.todos.forEach((t) => (template += t.TodoTemplate));
-
+  let todos = ProxyState.todos;
+  todos.forEach((t) => (template += t.TodoTemplate));
   todoElem.innerHTML = template;
+
+  //document.getElementById("taskTotal").innerHTML += TaskTotalTemplate;
+  _taskNum();
+}
+
+function _taskNum() {
+  let totalNumElem = document.getElementById("taskTotal");
+  let todos = ProxyState.todos;
+  let num = 0;
+  let complete = 0;
+  todos.forEach((t) => {
+    if (t.completed == true) {
+      complete++;
+    }
+  });
+  for (let i = 0; i < todos.length; i++) {
+    num++;
+  }
+  let template = `
+    <p>${complete} / ${num}</p>
+  
+  `;
+
+  totalNumElem.innerHTML = template;
+
+  console.log(num);
 }
 export default class TodoController {
   constructor() {
@@ -55,7 +81,6 @@ export default class TodoController {
     let formData = {
       completed: false,
       description: form.description.value,
-      //user: "BrianL",
     };
 
     console.log(formData);

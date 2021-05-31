@@ -5,6 +5,7 @@ function _drawClock() {
   let today = new Date();
   let hours = today.getHours();
   let minutes = today.getMinutes();
+  minutes = _checktime(minutes);
   let template = `<div>
   
   <span class="clock-time">${hours} : ${minutes}</span>
@@ -12,6 +13,13 @@ function _drawClock() {
   `;
 
   document.getElementById("clock").innerHTML = template;
+}
+
+function _checktime(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
 }
 export default class ClockController {
   constructor() {

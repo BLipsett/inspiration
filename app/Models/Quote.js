@@ -7,7 +7,7 @@ export default class Quote {
   get quoteTemplate() {
     return `
     <div class="quote-text text-light">
-      <p>${this.content} ~ ${this.author}</p>
+      <p>${this.content}</p><p class="author"> ~ ${this.author}</p>
     </div>
     
     `;
