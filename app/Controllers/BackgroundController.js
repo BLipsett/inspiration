@@ -9,7 +9,6 @@ function _drawBackground() {
 
   template += `
         <div class="container-fluid background" style="background-image: url('${background.img}'); height: 100vh; background-size: cover;">
-
         </div>
     `;
 
