@@ -58,5 +58,6 @@ export default class TodoController {
     console.log(formData);
 
     todoService.addTodo(formData);
+    form.reset();
   }
 }
