@@ -13,7 +13,7 @@ export default class TodoController {
     ProxyState.on("todos", _drawTodos);
     this.getName();
     _drawTodos();
-    this.getTodos();
+    //this.getTodos();
   }
 
   clicked(id) {
@@ -37,12 +37,15 @@ export default class TodoController {
       name: form.userName.value,
     };
     todoService.addName(userName);
-    this.getName();
+    //this.getName();
   }
 
   getTodos() {
     let user = ProxyState.activeUser.name;
-    todoService.getTodos(user);
+    console.log("user from proxystate for todos", user);
+    if (user) {
+      todoService.getTodos(user);
+    }
   }
 
   addTodo(event) {

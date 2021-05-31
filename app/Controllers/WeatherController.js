@@ -16,4 +16,18 @@ export default class WeatherController {
   getWeather() {
     weatherService.getWeather();
   }
+
+  changeToCelc() {
+    document.getElementById("far").classList.add("d-none");
+    document.getElementById("celcius").classList.remove("d-none");
+
+    console.log("temp to celc");
+  }
+
+  changeToFar() {
+    document.getElementById("far").classList.remove("d-none");
+    document.getElementById("celcius").classList.add("d-none");
+
+    console.log("temp to celc");
+  }
 }
